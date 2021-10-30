@@ -1,0 +1,14 @@
+.authBackground{
+    margin: 0,0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://img.freepik.com/free-vector/watercolor-back-school-background-with-white-space_52683-41450.jpg?size=626&ext=jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.dark-overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
