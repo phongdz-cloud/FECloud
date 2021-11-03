@@ -34,14 +34,6 @@ export class LoginComponent implements OnInit {
 
     this.loginService.loginAccount(this.info).subscribe(response => {
       console.log(response);
-      /* if (response.success)
-      {
-        console.log(response);
-        localStorage.setItem('key', response.accessToken);
-        this.router.navigate(['home']).then (() => {
-          window.location.reload();
-        });
-      } */
     },error => {console.log(error)});
 
   }

@@ -1,0 +1,10 @@
+{
+    "/api": {
+      "target": "https://z7hqudenb2.execute-api.us-east-1.amazonaws.com/dev/user/login",
+      "secure": false,
+      "pathRewrite": {
+        "^/api": ""
+      },
+      "changeOrigin": true
+    }
+  }
