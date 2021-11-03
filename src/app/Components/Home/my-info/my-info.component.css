@@ -1,0 +1,40 @@
+.myBack{
+    position:absolute;
+    width: 80%;
+    height: 100%;
+}
+
+.first{
+    height: 10vh;
+    background-color: rgb(51, 183, 235);
+}
+
+.second{
+    height: 30vh;
+    background-color: rgb(169, 225, 247);
+}
+
+img {
+    border-radius: 50%;
+    position:absolute;
+    width: 10vw;
+    height: 20vh;
+    margin-top: 1rem;
+    margin-left: 5rem;
+}
+
+.showName{
+    margin-left: 20rem;
+}
+
+.basic, .contact{
+    width: 50%;
+}
+
+.basic{
+    border-right: 1px solid black;
+}
+
+.contact{
+    border-left: 1px;
+}

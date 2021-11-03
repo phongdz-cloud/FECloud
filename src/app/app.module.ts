@@ -12,13 +12,18 @@ import { HeaderComponent } from './Components/Home/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
+import { MainPageComponent } from './Components/Home/main-page/main-page.component';
+import { MyInfoComponent } from './Components/Home/my-info/my-info.component';
 
 const appRoutes: Routes = [
   {path: 'auth', component: AuthLandingComponent,
    children: [{path: 'login', component: LoginComponent}, {path: 'register', component: RegisterComponent}]
   },
   {path: '', redirectTo: 'home', pathMatch:'full'},
-  {path: 'home', component: HomeComponent}
+  {path: 'home', component: HomeComponent,children:[
+    {path: 'mainPage', component: MainPageComponent},
+    {path: 'myInfo',component: MyInfoComponent}
+  ]},
 ]
 
 @NgModule({
@@ -28,7 +33,9 @@ const appRoutes: Routes = [
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    MainPageComponent,
+    MyInfoComponent
   ],
   imports: [
     BrowserModule,

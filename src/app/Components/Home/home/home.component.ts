@@ -12,9 +12,10 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    if (!localStorage.getItem('key'))
+    if (!localStorage.getItem('learn'))
       this.router.navigate(['auth/login']);
-    
+    else 
+      this.router.navigate(['home/mainPage']);
   }
 
   
