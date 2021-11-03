@@ -14,6 +14,10 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import { MainPageComponent } from './Components/Home/main-page/main-page.component';
 import { MyInfoComponent } from './Components/Home/my-info/my-info.component';
+import { CoursesComponent } from './Components/Home/courses/courses.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { CourseComponent } from './Components/Home/course/course.component';
+import { ContentCourseComponent } from './Components/Home/content-course/content-course.component';
 
 const appRoutes: Routes = [
   {path: 'auth', component: AuthLandingComponent,
@@ -22,7 +26,9 @@ const appRoutes: Routes = [
   {path: '', redirectTo: 'home', pathMatch:'full'},
   {path: 'home', component: HomeComponent,children:[
     {path: 'mainPage', component: MainPageComponent},
-    {path: 'myInfo',component: MyInfoComponent}
+    {path: 'myInfo',component: MyInfoComponent},
+    {path: 'myCourses', component: CoursesComponent},
+    {path: 'course', component: CourseComponent}
   ]},
 ]
 
@@ -35,12 +41,16 @@ const appRoutes: Routes = [
     HomeComponent,
     HeaderComponent,
     MainPageComponent,
-    MyInfoComponent
+    MyInfoComponent,
+    CoursesComponent,
+    CourseComponent,
+    ContentCourseComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MatTabsModule,
     RouterModule.forRoot(appRoutes, {enableTracing: true}), BrowserAnimationsModule, MatIconModule, MatButtonModule
   ],
   providers: [],
