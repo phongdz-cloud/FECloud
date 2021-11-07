@@ -6,7 +6,7 @@ import { SharedData } from '../Interfaces/SharedData';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json',
-    Authorization: `Bearer ${localStorage.getItem('key')}`
+    Authorization: `Bearer ${localStorage.getItem('learn')}`
   })
 };
 
@@ -22,7 +22,8 @@ export class SharedService {
   
 
   getNameOfAccount():Observable<SharedData>{
-    return this.request.get<SharedData>('http://localhost:5000/account/getName', httpOptions);
+    console.log(httpOptions.headers);
+    return this.request.get<SharedData>('/token', httpOptions);
   }
 
 

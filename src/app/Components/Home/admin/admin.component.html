@@ -1,0 +1,68 @@
+<div class = "d-flex">
+    <div class="list-group">
+        <div class = "mb-3"><button><a routerLink = "/home/admin/mainPage">Trang Admin</a></button></div>
+
+
+        <div class="btn-group dropend mb-3">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Giảng Viên
+          </button>
+          <ul class="dropdown-menu my-3">
+
+          </ul>
+        </div>
+
+
+        <div class="btn-group dropend">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Sinh Viên
+            </button>
+            <ul class="dropdown-menu my-3">
+              <li><a class="dropdown-item" routerLink = "insertStudent">Thêm Sinh Viên</a></li>
+              <li><a class="dropdown-item" routerLink="list-students">Danh Sách Sinh Viên</a></li>
+              <li><a class="dropdown-item" href="#">Menu item</a></li>
+            </ul>
+        </div>
+
+
+        <div class="btn-group dropend my-3">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Khóa Học
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Menu item</a></li>
+              <li><a class="dropdown-item" href="#">Menu item</a></li>
+              <li><a class="dropdown-item" href="#">Menu item</a></li>
+            </ul>
+        </div>
+
+
+
+        <div class="btn-group dropend ">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Điểm
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Menu item</a></li>
+              <li><a class="dropdown-item" href="#">Menu item</a></li>
+              <li><a class="dropdown-item" href="#">Menu item</a></li>
+            </ul>
+        </div>
+
+        <div class="btn-group dropend my-3">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Thống Kê
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Menu item</a></li>
+              <li><a class="dropdown-item" href="#">Menu item</a></li>
+              <li><a class="dropdown-item" href="#">Menu item</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class = "mx-4 contentAdmin">
+      <router-outlet></router-outlet>
+    </div>
+</div>

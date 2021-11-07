@@ -18,6 +18,13 @@ import { CoursesComponent } from './Components/Home/courses/courses.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { CourseComponent } from './Components/Home/course/course.component';
 import { ContentCourseComponent } from './Components/Home/content-course/content-course.component';
+import { AddStudentComponent } from './Components/Home/add-student/add-student.component';
+import { AdminComponent } from './Components/Home/admin/admin.component';
+import { AccessDeniedComponent } from './Components/Error/access-denied/access-denied.component';
+import { NotFoundComponent } from './Components/Error/not-found/not-found.component';
+import { DashboardComponent } from './Components/Home/dashboard/dashboard.component';
+import { ListStudentsComponent } from './Components/Home/list-students/list-students.component';
+
 
 const appRoutes: Routes = [
   {path: 'auth', component: AuthLandingComponent,
@@ -25,11 +32,19 @@ const appRoutes: Routes = [
   },
   {path: '', redirectTo: 'home', pathMatch:'full'},
   {path: 'home', component: HomeComponent,children:[
-    {path: 'mainPage', component: MainPageComponent},
     {path: 'myInfo',component: MyInfoComponent},
     {path: 'myCourses', component: CoursesComponent},
-    {path: 'course', component: CourseComponent}
+    {path: 'course', component: CourseComponent},
+    {path: 'dashboard', component: DashboardComponent},
+    {path: 'admin', component: AdminComponent, children: [
+      {path: 'mainPage', component: MainPageComponent},
+      {path: 'insertStudent', component: AddStudentComponent},
+      {path: 'list-students', component: ListStudentsComponent}
+    ]}
   ]},
+  
+  {path:'access-denied', component: AccessDeniedComponent},
+  {path: 'not-found', component: NotFoundComponent}
 ]
 
 @NgModule({
@@ -44,7 +59,13 @@ const appRoutes: Routes = [
     MyInfoComponent,
     CoursesComponent,
     CourseComponent,
-    ContentCourseComponent
+    ContentCourseComponent,
+    AddStudentComponent,
+    AdminComponent,
+    AccessDeniedComponent,
+    NotFoundComponent,
+    DashboardComponent,
+    ListStudentsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,29 @@
 .myMenu{
     height: 100vh;
     width: 13vw;
-    border: 2px solid skyblue;
+}
+
+.myHome{
+    background-color: rgb(233, 224, 224);
 }
 
 .content{
     width: 70vw;
 }
+
+a{
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px;
+}
+
+.choose{
+    background-color: rgb(72, 153, 228);
+    color: white;
+}
+
+/* .myContent{
+    width: 100vw;
+    background-color: rgb(182, 147, 214);
+} */

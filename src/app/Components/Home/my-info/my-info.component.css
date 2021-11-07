@@ -1,40 +1,19 @@
-.myBack{
+.myBack {
+    width: 83vw;
+    height: 100vh;
     position:absolute;
-    width: 80%;
-    height: 100%;
 }
 
-.first{
-    height: 10vh;
-    background-color: rgb(51, 183, 235);
-}
-
-.second{
-    height: 30vh;
-    background-color: rgb(169, 225, 247);
-}
-
-img {
+.avatar{
+    width: 15vw;
+    height: 25vh;
     border-radius: 50%;
-    position:absolute;
-    width: 10vw;
-    height: 20vh;
-    margin-top: 1rem;
-    margin-left: 5rem;
 }
 
-.showName{
-    margin-left: 20rem;
+.accordion{
+    width: 60vw;
 }
 
-.basic, .contact{
-    width: 50%;
-}
-
-.basic{
-    border-right: 1px solid black;
-}
-
-.contact{
-    border-left: 1px;
+.myInfo{
+    margin-left: 10vw;
 }

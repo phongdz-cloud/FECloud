@@ -1,16 +1,21 @@
 <app-header></app-header>
-<div class="container myHome d-flex">
-  <div class="myMenu w3-animate-left p-2">
-    <a routerLink = "/home/mainPage" class="list-group-item list-group-item-action">Trang Chủ</a>
-    <a routerLink = "/home/myInfo" class="list-group-item list-group-item-action">Thông Tin Cá Nhân</a>
-    <a routerLink = "/home/myCourses" class="list-group-item list-group-item-action">Khóa Học</a>
-    <a routerLink = "/home/course" class="list-group-item list-group-item-action">Điểm Số</a>
-    <a href="#" class="list-group-item list-group-item-action">Điểm Số</a>
-    <a href="#" class="list-group-item list-group-item-action">Điểm Số</a>
-  </div>
-  <div class = "content px-2">
-    <router-outlet></router-outlet>
-  </div>
+<div class="d-flex flex-row w3-animate-left mt-0">
 
+  <a routerLink = "/home/dashboard" class="list-group-item list-group-item-action text-center">
+    <i class="fa fa-home mx-4 mb-1" aria-hidden="true"></i>Home
+  </a>
+  <a routerLink = "/home/myInfo" class="list-group-item list-group-item-action text-center">
+    <i class="fa fa-info-circle" aria-hidden="true"></i>Thông Tin Cá Nhân
+  </a>
+  <a routerLink = "/home/myCourses" class="list-group-item list-group-item-action text-center">
+    <i class="fa fa-pencil-square" aria-hidden="true"></i>Khóa Học
+  </a>
+  <a routerLink = "/home/admin" class="list-group-item list-group-item-action text-center">
+    <i class="fa fa-user-cog" aria-hidden="true"></i>Quản Lý
+    
+  </a>
+</div>
 
+<div class="myContent container d-flex mt-4">  
+  <router-outlet></router-outlet>
 </div>

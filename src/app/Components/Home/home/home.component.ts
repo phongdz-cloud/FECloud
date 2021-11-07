@@ -15,9 +15,11 @@ export class HomeComponent implements OnInit {
     if (!localStorage.getItem('learn'))
       this.router.navigate(['auth/login']);
     else 
-      this.router.navigate(['home/mainPage']);
+      this.router.navigate(['home/dashboard']);
   }
 
-  
+  changeColor(event: any){
+    (event.target as HTMLInputElement).classList.add('choose')
+  }
 
 }
