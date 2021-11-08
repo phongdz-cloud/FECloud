@@ -1,68 +1,41 @@
-<div class = "d-flex">
-    <div class="list-group">
-        <div class = "mb-3"><button><a routerLink = "/home/admin/mainPage">Trang Admin</a></button></div>
-
-
-        <div class="btn-group dropend mb-3">
-          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            Giảng Viên
-          </button>
-          <ul class="dropdown-menu my-3">
-
-          </ul>
-        </div>
-
-
-        <div class="btn-group dropend">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Sinh Viên
-            </button>
-            <ul class="dropdown-menu my-3">
-              <li><a class="dropdown-item" routerLink = "insertStudent">Thêm Sinh Viên</a></li>
-              <li><a class="dropdown-item" routerLink="list-students">Danh Sách Sinh Viên</a></li>
-              <li><a class="dropdown-item" href="#">Menu item</a></li>
-            </ul>
-        </div>
-
-
-        <div class="btn-group dropend my-3">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Khóa Học
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Menu item</a></li>
-              <li><a class="dropdown-item" href="#">Menu item</a></li>
-              <li><a class="dropdown-item" href="#">Menu item</a></li>
-            </ul>
-        </div>
-
-
-
-        <div class="btn-group dropend ">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Điểm
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Menu item</a></li>
-              <li><a class="dropdown-item" href="#">Menu item</a></li>
-              <li><a class="dropdown-item" href="#">Menu item</a></li>
-            </ul>
-        </div>
-
-        <div class="btn-group dropend my-3">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Thống Kê
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Menu item</a></li>
-              <li><a class="dropdown-item" href="#">Menu item</a></li>
-              <li><a class="dropdown-item" href="#">Menu item</a></li>
-            </ul>
-        </div>
-
+<div>
+  <div class = "d-flex">
+    <button class = "mx-3 myBtn px-3">
+      Dashboard
+    </button>
+    <div class="dropdown">
+      <button class="myBtn mx-3 btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Student
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" routerLink = "insertStudent">Add Student</a></li>
+        <li><a class="dropdown-item" href="#">List Student</a></li>
+      </ul>
     </div>
 
-    <div class = "mx-4 contentAdmin">
-      <router-outlet></router-outlet>
+    <div class="dropdown">
+      <button class="myBtn mx-3 btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Teacher
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" routerLink = "insertStudent">Add Teacher</a></li>
+        <li><a class="dropdown-item" href="#">List Teachers</a></li>
+      </ul>
     </div>
+
+    <div class="dropdown">
+      <button class="myBtn mx-3 btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Course
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" routerLink = "insertStudent">Add Course</a></li>
+        <li><a class="dropdown-item" href="#">List Courses</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <div class = "m-3">
+    <router-outlet></router-outlet>
+  </div>
 </div>
+

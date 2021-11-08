@@ -24,13 +24,14 @@ import { AccessDeniedComponent } from './Components/Error/access-denied/access-d
 import { NotFoundComponent } from './Components/Error/not-found/not-found.component';
 import { DashboardComponent } from './Components/Home/dashboard/dashboard.component';
 import { ListStudentsComponent } from './Components/Home/list-students/list-students.component';
-
+import { AddTeacherComponent } from './Components/Home/add-teacher/add-teacher.component';
+import { AddCourseComponent } from './Components/Home/add-course/add-course.component';
 
 const appRoutes: Routes = [
   {path: 'auth', component: AuthLandingComponent,
    children: [{path: 'login', component: LoginComponent}, {path: 'register', component: RegisterComponent}]
   },
-  {path: '', redirectTo: 'home', pathMatch:'full'},
+  {path: '', redirectTo: 'home/dashboard', pathMatch:'full'},
   {path: 'home', component: HomeComponent,children:[
     {path: 'myInfo',component: MyInfoComponent},
     {path: 'myCourses', component: CoursesComponent},
@@ -66,6 +67,8 @@ const appRoutes: Routes = [
     NotFoundComponent,
     DashboardComponent,
     ListStudentsComponent,
+    AddTeacherComponent,
+    AddCourseComponent,
   ],
   imports: [
     BrowserModule,

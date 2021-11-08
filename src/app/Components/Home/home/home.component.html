@@ -1,23 +1,32 @@
 <app-header></app-header>
-<div class="d-flex flex-row w3-animate-left mt-0">
+<div class = "d-flex">
 
-  <a routerLink = "/home/dashboard" class="list-group-item list-group-item-action text-center">
-    <i class="fa fa-home mx-4 mb-1" aria-hidden="true"></i>Home
-  </a>
-  <a routerLink = "/home/myInfo" class="list-group-item list-group-item-action text-center">
-    <i class="fa fa-info-circle" aria-hidden="true"></i>Thông Tin Cá Nhân
-  </a>
-  <a routerLink = "/home/myCourses" class="list-group-item list-group-item-action text-center">
-    <i class="fa fa-pencil-square" aria-hidden="true"></i>Khóa Học
-  </a>
-  <a routerLink = "/home/admin" class="list-group-item list-group-item-action text-center">
-    <i class="fa fa-user-cog" aria-hidden="true"></i>Quản Lý
-    
-  </a>
-</div>
-<div>
-  <div class="myContent container d-flex mt-4">  
-    <router-outlet></router-outlet>
+  <div class = "myMenu">
+    <div class = "demo p-3 text-center">
+      <img src = "https://haitrieu.com/wp-content/uploads/2021/09/Logo-DH-Su-Pham-Ky-Thuat-TP-Ho-Chi-Minh-HCMUTE.png" class = "logo"/>
+    </div>
+    <a routerLink = "dashboard" class = "my btn d-flex mt-3 text-light">
+      <i class="fa fa-table mx-3" aria-hidden="true"></i>Home
+    </a>
+
+    <a routerLink = "myInfo" class = "my btn d-flex text-light">
+      <i class="fas fa-info-circle mx-3"></i>Your Information
+    </a>
+
+    <a routerLink = "myCourses" class = "my btn d-flex text-light">
+      <i class="fas fa-school mx-3"></i>Course
+    </a>
+
+    <a routerLink = "admin" class = "my btn d-flex text-light">
+      <i class='fas fa-users-cog mx-3'></i>Admin
+    </a>
+
+  </div>
+  
+  <div>
+    <div class="myContent d-flex mx-4 p-4">  
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>
 
