@@ -4,9 +4,12 @@
     border: 0;
 }
 
+
+
 .myHeader{
     width: 100vw;
     height: 10vh;
+    margin-top: 0;
 }
 
 img{
@@ -37,7 +40,7 @@ h2{
 }
 
 .myContentHeader{
-    background-image: linear-gradient(0,rgb(190, 170, 59), rgb(201, 145, 154));
+    background-image: linear-gradient(-90deg,rgb(101, 113, 221), rgb(33, 189, 228));
     color: white
 }
 

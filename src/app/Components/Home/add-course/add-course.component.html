@@ -1,1 +1,34 @@
-<p>add-course works!</p>
+<div>
+    <h1>Thêm Khóa Học</h1>
+    <hr />
+    
+    <div class = "d-flex">
+        <div class="input-group mb-3 mx-3">
+            <span class="input-group-text" id="basic-addon1">Tên Khóa Học</span>
+            <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+    
+        <div class="input-group mb-3 mx-3">
+            <span class="input-group-text" id="basic-addon1">Mã Giảng Viên Phụ Trách</span>
+            <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+    </div>
+
+    <div class = "mx-3 d-flex flex-column">
+        <div>
+            <h3>Hình Mô Tả Khóa Học</h3>
+            <input (change)="upThumnail($event)" type = "file" accept="*.jpg.png"/>
+        </div>
+        <img class = "myThumnail" [src] = "urlImage"/>
+    </div>
+
+    <div class = "m-3">
+        <h3>Mô Tả Khóa Học</h3>
+        <ckeditor #content class = "myContent" [editor]="Editor"></ckeditor>
+    </div>
+
+
+    <button  class = "m-3">Thêm Khóa Học</button>
+    
+
+</div>

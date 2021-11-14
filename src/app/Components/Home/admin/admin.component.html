@@ -1,6 +1,6 @@
 <div>
   <div class = "d-flex">
-    <button class = "mx-3 myBtn px-3">
+    <button routerLink = "mainPage" class = "mx-3 myBtn px-3">
       Dashboard
     </button>
     <div class="dropdown">
@@ -18,7 +18,7 @@
         Teacher
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" routerLink = "insertStudent">Add Teacher</a></li>
+        <li><a class="dropdown-item" routerLink = "add-teacher">Add Teacher</a></li>
         <li><a class="dropdown-item" href="#">List Teachers</a></li>
       </ul>
     </div>
@@ -28,13 +28,13 @@
         Course
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" routerLink = "insertStudent">Add Course</a></li>
+        <li><a class="dropdown-item" routerLink = "add-course">Add Course</a></li>
         <li><a class="dropdown-item" href="#">List Courses</a></li>
       </ul>
     </div>
 
   </div>
-  <div class = "m-3">
+  <div class = "m-3 myContentAdmin p-3 bg-light">
     <router-outlet></router-outlet>
   </div>
 </div>

@@ -1,52 +1,88 @@
-<div>
-  <div class = "digitalClock text-center mb-3">
-    <div class = "dayTitle my-4">
-      {{this.day}}, {{this.today}}
-    </div>
-    <div class = "digitalTime d-flex my-4">
-          <div class ="px-2">{{this.hour}}   :</div>
-          <div class ="px-2">{{this.minute}}   :</div>
-          <div class ="px-2">{{this.second}}</div>
-          <div class ="px-2">{{this.ampm}}</div>
+<div class = "all">
+  <div class = "intro">
+    <div class = "showIntro text-center">
+      <div class = "contentIntro w3-animate-top">
+        <h1 class = "my-3">Trường Đại Học</h1>
+        <h1 class = "my-3">Sư Phạm Kỹ Thuật</h1>
+        <h1 class = "my-3">Thành Phố Hồ Chí Minh</h1>
       </div>
+    </div>
+  </div>
+
+  <div class = "goLink mt-4 d-flex justify-content-around">
+
+    <div (click)="goToMyInforLink()" class = "myLink text-center">
+      <i class="fas fa-info-circle"></i>
     </div>
 
-  <div class = "">  
-
-  <div class = "d-flex justify-content-between">
-    <div class = "d-flex mx-2">
-      <div class = "d-flex flex-column myNumber p-3 text-center">
-        <i class="fa fa-graduation-cap mb-2" aria-hidden="true"></i>
-        Student
-      </div>
-      <div class="vl"></div>
-      <div class = "d-flex flex-column myNumber p-3 text-center pt-5">
-        50,000
-      </div>
-    </div>
-  
-  
-    <div class = "d-flex mx-2">
-      <div class = "d-flex flex-column myNumber p-3 text-center">
-        <i class="fa fa-chalkboard-teacher mb-2" aria-hidden="true"></i>
-        Teacher
-      </div>
-      <div class="vl"></div>
-      <div class = "d-flex flex-column myNumber p-3 text-center pt-5">
-        10,000
-      </div>
+    <div (click)="goToSchedulerLink()" class = "myLink text-center">
+      <i class="fa fa-calendar"></i>
     </div>
 
-    <div class = "myLogoFace mx-3 p-4">
-      <i class="fab fa-facebook-f text-light social"></i>
-      <h1 class = "text-light py-2">facebook</h1>
-    </div>
 
-    <div class = "myLogoG mx-3 p-4">
-      <i class="fab fa-google social text-light"></i>
-      <h1 class = "text-light py-2">google+</h1>
+    <div (click)="goToMyCourseLink()" class = "myLink text-center">
+      <i class="fas fa-school"></i>
     </div>
 
   </div>
-</div>
+
+  <div class = "digitalClock">
+    
+  </div>
+
+  <div class = "mt-5">
+
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="btn-group">
+          <div
+            class="btn btn-primary"
+            mwlCalendarPreviousView
+            [view]="view"
+            [(viewDate)]="viewDate"
+            (viewDateChange)="closeOpenMonthViewDay()"
+          >
+            Previous
+          </div>
+          <div
+            class="btn btn-outline-secondary"
+            mwlCalendarToday
+            [(viewDate)]="viewDate"
+          >
+            Today
+          </div>
+          <div
+            class="btn btn-primary"
+            mwlCalendarNextView
+            [view]="view"
+            [(viewDate)]="viewDate"
+            (viewDateChange)="closeOpenMonthViewDay()"
+          >
+            Next
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
+      </div>
+      
+    <br />
+  
+    <div [ngSwitch]="view">
+      <mwl-calendar-month-view
+        *ngSwitchCase="CalendarView.Month"
+        [viewDate]="viewDate"
+        [events]="events"
+        [refresh]="refresh"
+        [activeDayIsOpen]="activeDayIsOpen"
+        (dayClicked)="dayClicked($event.day)"
+        (eventClicked)="handleEvent('Clicked', $event.event)"
+        (eventTimesChanged)="eventTimesChanged($event)"
+      >
+      </mwl-calendar-month-view>
+
+    </div>
+
+  </div>
+  
 </div>

@@ -11,7 +11,7 @@ i{
 }
 
 .myNotice{
-    width: 30vw;
+    width: 25vw;
 }
 
 .date{
@@ -38,4 +38,8 @@ i{
 
 .social{
     font-size: 30px;
+}
+
+.myInfo{
+    width: 50vw;
 }
