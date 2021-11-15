@@ -5,9 +5,9 @@ export interface Student {
     bDate: string,
     address: string,
     phone: string,
-    gmail: string,
-    status: boolean,
-    yearOfAdmisstion: number,
-    graduationYear?: number,
-    user_id: string
+    /* gmail: string,
+    status: boolean, */
+    /* yearOfAdmisstion: number, */
+    /* graduationYear?: number, */
+    userId: string
 }

@@ -35,6 +35,20 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { SchedulerComponent } from './Components/Home/scheduler/scheduler.component';
 import { AddTeacherComponent } from './Components/Home/add-teacher/add-teacher.component';
+import { AddSubjectComponent } from './Components/Home/add-subject/add-subject.component';
+import { AngularFireModule } from "@angular/fire/compat";
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAYN3obXuGsdyGJhbjcJSYD2RZ0sG2Xs_M",
+  authDomain: "cloudproject-dc48c.firebaseapp.com",
+  projectId: "cloudproject-dc48c",
+  storageBucket: "cloudproject-dc48c.appspot.com",
+  messagingSenderId: "540464327898",
+  appId: "1:540464327898:web:684df7b3d0ba75fb3749e3",
+  measurementId: "G-GSZZ51N0ZQ"
+};
 
 const appRoutes: Routes = [
   {path: 'auth', component: AuthLandingComponent,
@@ -52,7 +66,8 @@ const appRoutes: Routes = [
       {path: 'insertStudent', component: AddStudentComponent},
       {path: 'list-students', component: ListStudentsComponent},
       {path: 'add-course', component: AddCourseComponent},
-      {path: 'add-teacher', component: AddTeacherComponent}
+      {path: 'add-teacher', component: AddTeacherComponent},
+      {path: 'add-subject', component: AddSubjectComponent}
     ]}
   ]},
   
@@ -81,7 +96,8 @@ const appRoutes: Routes = [
     ListStudentsComponent,
     AddCourseComponent,
     SchedulerComponent,
-    AddTeacherComponent
+    AddTeacherComponent,
+    AddSubjectComponent
   ],
   imports: [
     BrowserModule,
@@ -94,6 +110,8 @@ const appRoutes: Routes = [
     NgbModalModule,
     FormsModule,
     CommonModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireStorageModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,

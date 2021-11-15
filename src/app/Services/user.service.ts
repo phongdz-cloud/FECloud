@@ -23,7 +23,7 @@ export class UserService {
 
   //add user
   addUser(user: User):Observable<{}>{
-    return this.request.post<{}>(``, user);
+    return this.request.post<{}>(`/addUser`, user);
   }
 
 

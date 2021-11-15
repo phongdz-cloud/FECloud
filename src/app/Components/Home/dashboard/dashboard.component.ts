@@ -151,7 +151,19 @@ export class DashboardComponent {
   refresh: Subject<any> = new Subject();
 
   events: CalendarEvent[] = [
-
+    {
+      start: subDays(startOfDay(new Date()), 0),
+      //end: addDays(new Date(), 1),
+      title: 'Báo Cáo Điện Toán Đám Mây',
+      color: colors.red,
+      actions: this.actions,
+      allDay: true,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
   ];
 
   activeDayIsOpen: boolean = true;

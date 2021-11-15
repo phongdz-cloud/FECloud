@@ -1,9 +1,9 @@
 {
-    "/api": {
-      "target": "https://z7hqudenb2.execute-api.us-east-1.amazonaws.com/dev/user/login",
+    "/login": {
+      "target": "https://ybe36gcokg.execute-api.us-east-1.amazonaws.com/dev/user/login",
       "secure": false,
       "pathRewrite": {
-        "^/api": ""
+        "^/login": ""
       },
       "changeOrigin": true
     },
@@ -11,7 +11,7 @@
 
 
     "/token": {
-      "target": "https://z7hqudenb2.execute-api.us-east-1.amazonaws.com/dev/student/token",
+      "target": "https://ybe36gcokg.execute-api.us-east-1.amazonaws.com/dev/student/token",
       "secure": false,
       "pathRewrite": {
         "^/token": ""
@@ -22,36 +22,50 @@
 
     
     "/studentApi": {
-      "target": "https://z7hqudenb2.execute-api.us-east-1.amazonaws.com/dev/student",
+      "target": "https://ybe36gcokg.execute-api.us-east-1.amazonaws.com/dev/student",
       "secure": false,
       "pathRewrite": {
         "^/studentApi": ""
-      }
+      },
+      "changeOrigin": true
     },
 
 
     "/getStudent": {
-      "target": "https://z7hqudenb2.execute-api.us-east-1.amazonaws.com/dev/student/:id",
+      "target": "https://ybe36gcokg.execute-api.us-east-1.amazonaws.com/dev/student/:id",
       "secure": false,
       "pathRewrite": {
         "^/getStudent": ""
-      }
+      },
+      "changeOrigin": true
     },
 
     "/teacherApi": {
-      "target": "https://z7hqudenb2.execute-api.us-east-1.amazonaws.com/dev/teacher",
+      "target": "https://ybe36gcokg.execute-api.us-east-1.amazonaws.com/dev/teacher",
       "secure": false,
       "pathRewrite": {
         "^/teacherApi": ""
-      }
+      },
+      "changeOrigin": true
     },
 
     "/getTeacher": {
-      "target": "https://z7hqudenb2.execute-api.us-east-1.amazonaws.com/dev/student/:id",
+      "target": "https://ybe36gcokg.execute-api.us-east-1.amazonaws.com/dev/student/:id",
       "secure": false,
       "pathRewrite": {
         "^/getTeacher": ""
-      }
+      },
+      "changeOrigin": true
+    },
+
+
+    "/addUser": {
+      "target": "https://ybe36gcokg.execute-api.us-east-1.amazonaws.com/dev/user",
+      "secure": false,
+      "pathRewrite": {
+        "^/addUser": ""
+      },
+      "changeOrigin": true
     }
 
 }

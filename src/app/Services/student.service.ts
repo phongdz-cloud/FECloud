@@ -21,12 +21,12 @@ export class StudentService {
   
   //get all students
   getAllStudents():Observable<{}>{
-    return this.request.get(``);
+    return this.request.get<{}>(`/studentApi`);
   }
 
   //add student
   addStudent(student: Student):Observable<{}>{
-    return this.request.post<{}>(``,student);
+    return this.request.post<{}>(`/studentApi`,student);
   }
 
 

@@ -4,57 +4,57 @@
     <div class = "d-flex justify-content-between">
         <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">First Name</span>
-            <input name = "fName" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input (keyup)="getInfor($event)" name = "fName" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
     
         <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Middle Name</span>
-            <input name = "mName" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input (keyup)="getInfor($event)" name = "mName" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
     
         <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Last Name</span>
-            <input name = "lName" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input (keyup)="getInfor($event)" name = "lName" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
     </div>
     
 
     <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">ID</span>
-        <input name = "id" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input (keyup)="getInfor($event)" name = "id" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
 
     <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">BirthDay</span>
-        <input name = "bDate" type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input (change)="getDate($event)" name = "bDate" type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
 
     <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">Phone</span>
-        <input name = "phone" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input (keyup)="getInfor($event)" name = "phone" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
 
     <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">Address</span>
-        <input name = "address" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input (keyup)="getInfor($event)" name = "address" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
 
     <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">Class</span>
-        <input name = "class" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input (keyup)="getInfor($event)" name = "class" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
 
 
     <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">Group</span>
-        <input name = "group" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input (keyup)="getInfor($event)" name = "group" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
 
     <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">Gmail</span>
-        <input name = "group" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input (keyup)="getInfor($event)" name = "group" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
 
 
-    <button class = "btn bg-success text-light">Add Student</button>
+    <button (click)="addStudent()" class = "btn bg-success text-light">Add Student</button>
 </div>
