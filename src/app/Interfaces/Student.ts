@@ -8,5 +8,6 @@ export interface Student {
     gmail: string,
     status: boolean,
     yearOfAdmisstion: number,
-    graduationYear?: number
+    graduationYear?: number,
+    user_id: string
 }

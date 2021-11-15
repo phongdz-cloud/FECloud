@@ -34,6 +34,7 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { SchedulerComponent } from './Components/Home/scheduler/scheduler.component';
+import { AddTeacherComponent } from './Components/Home/add-teacher/add-teacher.component';
 
 const appRoutes: Routes = [
   {path: 'auth', component: AuthLandingComponent,
@@ -50,7 +51,8 @@ const appRoutes: Routes = [
       {path: 'mainPage', component: MainPageComponent},
       {path: 'insertStudent', component: AddStudentComponent},
       {path: 'list-students', component: ListStudentsComponent},
-      {path: 'add-course', component: AddCourseComponent}
+      {path: 'add-course', component: AddCourseComponent},
+      {path: 'add-teacher', component: AddTeacherComponent}
     ]}
   ]},
   
@@ -78,7 +80,8 @@ const appRoutes: Routes = [
     DashboardComponent,
     ListStudentsComponent,
     AddCourseComponent,
-    SchedulerComponent
+    SchedulerComponent,
+    AddTeacherComponent
   ],
   imports: [
     BrowserModule,

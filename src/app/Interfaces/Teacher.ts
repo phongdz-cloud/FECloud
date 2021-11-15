@@ -8,5 +8,6 @@ export interface Teacher{
     address: string,
     dateJoin: string,
     status: boolean,
-    gmail: string
+    gmail: string,
+    user_id: string
 }

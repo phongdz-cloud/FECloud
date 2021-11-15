@@ -11,7 +11,7 @@ export class AddStudentComponent implements OnInit {
 
   date = new Date();
 
-  student: Student = {firstName: '', middleName: '', lastName: '', bDate: '', phone: '', address: '', status: true, gmail: '',yearOfAdmisstion: this.date.getFullYear()}
+  /* student: Student = {firstName: '', middleName: '', lastName: '', bDate: '', phone: '', address: '', status: true, gmail: '',yearOfAdmisstion: this.date.getFullYear()} */
 
   ngOnInit(): void {
 

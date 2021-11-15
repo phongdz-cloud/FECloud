@@ -7,6 +7,9 @@
       },
       "changeOrigin": true
     },
+
+
+
     "/token": {
       "target": "https://z7hqudenb2.execute-api.us-east-1.amazonaws.com/dev/student/token",
       "secure": false,
@@ -14,5 +17,41 @@
         "^/token": ""
       },
       "changeOrigin": true
+    },
+
+
+    
+    "/studentApi": {
+      "target": "https://z7hqudenb2.execute-api.us-east-1.amazonaws.com/dev/student",
+      "secure": false,
+      "pathRewrite": {
+        "^/studentApi": ""
+      }
+    },
+
+
+    "/getStudent": {
+      "target": "https://z7hqudenb2.execute-api.us-east-1.amazonaws.com/dev/student/:id",
+      "secure": false,
+      "pathRewrite": {
+        "^/getStudent": ""
+      }
+    },
+
+    "/teacherApi": {
+      "target": "https://z7hqudenb2.execute-api.us-east-1.amazonaws.com/dev/teacher",
+      "secure": false,
+      "pathRewrite": {
+        "^/teacherApi": ""
+      }
+    },
+
+    "/getTeacher": {
+      "target": "https://z7hqudenb2.execute-api.us-east-1.amazonaws.com/dev/student/:id",
+      "secure": false,
+      "pathRewrite": {
+        "^/getTeacher": ""
+      }
     }
-  }
+
+}
