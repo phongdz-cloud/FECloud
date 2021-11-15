@@ -6,6 +6,13 @@
       "^/api": ""
     },
     "changeOrigin": true
+  },
+  "/token": {
+    "target": "https://z7hqudenb2.execute-api.us-east-1.amazonaws.com/dev/student/token",
+    "secure": false,
+    "pathRewrite": {
+      "^/token": ""
+    },
+    "changeOrigin": true
   }
 }
-

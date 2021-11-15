@@ -19,6 +19,8 @@ export class LoginService {
   constructor(private request: HttpClient) { }
 
   loginAccount(info: account):Observable<Response>{
+    console.log(info);
+    console.log(JSON.stringify(info));
     return this.request.post<Response>('/api', JSON.stringify(info));
   }
 }

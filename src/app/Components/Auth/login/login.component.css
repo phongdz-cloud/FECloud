@@ -1,57 +1,51 @@
-.myAuthForm{
-    width: 40vw;
-    padding: 10px;
+
+
+
+.myBackground{
+    background-image: url('https://www.talentlms.com/blog/wp-content/uploads/2016/03/TLMS_20210122_1200x628_A.png');
+}
+
+.myForm{
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 60vh;
+    width: 70vw;
     margin: auto auto;
     margin-top: 15vh;
-    background-image: linear-gradient(0, rgba(0, 128, 0 ,0.5), rgba(255, 165, 0 ,0.5));
 }
 
-::placeholder{
-    color: white;
+.loginForm{
+    height: 100%;
+    width: 50%;
 }
 
-input[type="text"], input[type="password"]{
-    border-radius: 25px;
-    border: 2px solid green;
-    background: none;
-    outline: none;
-    color: white;
-    width: 70%;
+.decor{
+    background-image: url('https://www.talentlms.com/blog/wp-content/uploads/2016/03/TLMS_20210122_1200x628_A.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50%;
+}
+
+.mainInput{
+    width: 80%;
     margin: auto auto;
-    margin-top: 3vh;
-    transition: 0.8s;
+    margin-top: 15%;
+    background-image: linear-gradient(-45deg, rgb(0, 195, 255), white);
+    box-shadow: 5px 10px #888888;
+}
+
+.myBtn{
+    width: 50%;
+    margin: auto auto;
+}
+
+input{
+    background: none;
+    border: 1px solid orange;  
 }
 
 button{
-    width: 30%;
+    background-color: rgb(238, 238, 51);
+    border: 1px solid black;
     border-radius: 25px;
-    margin: auto auto;
-    padding: 2%;
-    margin-top: 2%;
-    border: 2px solid green;
-    background-color: green;
-    color: white;
-}
-
-input[type="text"]:focus, input[type="password"]:focus{
-    width: 90%;
-    border-color: yellow;
-    transition: 0.8s;
-}
-
-button:hover{
-    border-color: yellow;
-    background-color: yellow;
-    color: black;
-}
-
-.myLink{
-    margin-left: 15%;
-    margin-top: 2vh;
-}
-
-.myRadio{
-    width: 50%;
-    margin: auto auto;
-    justify-content: space-around;
 }

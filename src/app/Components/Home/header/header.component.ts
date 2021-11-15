@@ -13,14 +13,16 @@ export class HeaderComponent implements OnInit {
   constructor(private sharedService: SharedService, private router: Router) { }
 
   ngOnInit(): void {
-    this.sharedService.getNameOfAccount().subscribe(response => {
+    /* this.sharedService.getNameOfAccount().subscribe(response => {
       this.username = response.firstName + ' ' + response.middleName + ' ' + response.lastName ;
       this.role = response.role;
-    })
+
+      console.log(response);
+    }) */
   }
 
   logoutAccount(){
-    localStorage.removeItem('key');
+    localStorage.removeItem('learn');
     this.router.navigate(['auth/login']);
   }
 

@@ -1,0 +1,39 @@
+<label for="cars">Chọn Lớp</label>
+
+<select name="cars" id="cars" class = "mx-4">
+  <option value="volvo" value = ""></option>
+  <option (click)="getClass($event)" value="volvo" value = "19110CL1">19110CL1</option>
+  <option value="saab" value = "19110CL2">19110CL2</option>
+  <option value="mercedes" value = "19110CL3">19110CL3</option>
+  <option value="audi" value = "19110CL4">19110CL4</option>
+</select>
+<h1 class = "mt-4">Danh Sách Sinh Viên: {{this.class}}</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Student Name</th>
+        <th scope="col">Class</th>
+        <th scope="col">Gmail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>

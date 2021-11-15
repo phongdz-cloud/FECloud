@@ -17,6 +17,8 @@ export class LoginComponent implements OnInit {
   info: account = {username: '', password: ''}
   targetName: String = '';
 
+  auth:any = {success: false, token: String}
+
   onKey(event: any){
 
     this.targetName = event.target.name;
@@ -34,16 +36,15 @@ export class LoginComponent implements OnInit {
 
     this.loginService.loginAccount(this.info).subscribe(response => {
       console.log(response);
-      /* if (response.success)
+      this.auth = response;
+      console.log(this.auth);
+      if (this.auth.token)
       {
-        console.log(response);
-        localStorage.setItem('key', response.accessToken);
-        this.router.navigate(['home']).then (() => {
-          window.location.reload();
-        });
-      } */
+        localStorage.setItem('learn', this.auth.token);
+        this.router.navigate(['home/mainPage']);
+      }
+        
     },error => {console.log(error)});
-
   }
 
   ngOnInit(): void {
