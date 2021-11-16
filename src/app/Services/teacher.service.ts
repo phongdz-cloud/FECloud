@@ -35,7 +35,7 @@ export class TeacherService {
 
   //get teacher by id
   getTeacherById(id: string): Observable<{}>{
-    return this.request.get<{}>(`/${id}`)
+    return this.request.get<{}>(`/getTeacher/${id}`)
   }
 
   //delete teacher by id
