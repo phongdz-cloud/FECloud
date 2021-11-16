@@ -38,6 +38,7 @@ import { AddTeacherComponent } from './Components/Home/add-teacher/add-teacher.c
 import { AddSubjectComponent } from './Components/Home/add-subject/add-subject.component';
 import { AngularFireModule } from "@angular/fire/compat";
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { ListTeachersComponent } from './Components/Home/list-teachers/list-teachers.component';
 
 
 const firebaseConfig = {
@@ -67,7 +68,8 @@ const appRoutes: Routes = [
       {path: 'list-students', component: ListStudentsComponent},
       {path: 'add-course', component: AddCourseComponent},
       {path: 'add-teacher', component: AddTeacherComponent},
-      {path: 'add-subject', component: AddSubjectComponent}
+      {path: 'add-subject', component: AddSubjectComponent},
+      {path: 'list-teachers', component: ListTeachersComponent}
     ]}
   ]},
   
@@ -97,7 +99,8 @@ const appRoutes: Routes = [
     AddCourseComponent,
     SchedulerComponent,
     AddTeacherComponent,
-    AddSubjectComponent
+    AddSubjectComponent,
+    ListTeachersComponent
   ],
   imports: [
     BrowserModule,

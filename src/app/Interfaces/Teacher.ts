@@ -1,13 +1,10 @@
 export interface Teacher{
-    id: string,
     firstName: string,
     middleName: string,
     lastName: string,
     phone: string,
-    bDate: string,
     address: string,
-    dateJoin: string,
-    status: boolean,
+    status: number,
     gmail: string,
-    user_id: string
+    userId: string
 }

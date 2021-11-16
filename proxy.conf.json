@@ -31,11 +31,12 @@
     },
 
 
-    "/getStudent": {
-      "target": "https://ybe36gcokg.execute-api.us-east-1.amazonaws.com/dev/student/:id",
+    "/getStudent/*": {
+      "target": "https://ybe36gcokg.execute-api.us-east-1.amazonaws.com/dev/student",
       "secure": false,
       "pathRewrite": {
-        "^/getStudent": ""
+        "^/getStudent": "",
+        "^/id": "/jsonresponse.json"
       },
       "changeOrigin": true
     },
@@ -49,11 +50,12 @@
       "changeOrigin": true
     },
 
-    "/getTeacher": {
-      "target": "https://ybe36gcokg.execute-api.us-east-1.amazonaws.com/dev/student/:id",
+    "/getTeacher/*": {
+      "target": "https://ybe36gcokg.execute-api.us-east-1.amazonaws.com/dev/teacher",
       "secure": false,
       "pathRewrite": {
-        "^/getTeacher": ""
+        "^/getTeacher": "",
+        "^/id": "/jsonresponse.json"
       },
       "changeOrigin": true
     },

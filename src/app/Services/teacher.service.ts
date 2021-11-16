@@ -19,13 +19,13 @@ export class TeacherService {
 
 
   //get all teachers
-  getAllTeacher():Observable<{}>{
-    return this.request.get<{}>(``)
+  getAllTeachers():Observable<{}>{
+    return this.request.get<{}>(`/teacherApi`)
   }
 
   //add teacher
   addTeacher(teacher: Teacher):Observable<{}>{
-    return this.request.post<{}>(``, teacher);
+    return this.request.post<{}>(`/teacherApi`, teacher);
   }
 
   //modify teacher
@@ -40,7 +40,7 @@ export class TeacherService {
 
   //delete teacher by id
   deleteTeacher(id: string):Observable<{}>{
-    return this.request.delete<{}>(`/${id}`)
+    return this.request.delete<{}>(`/getTeacher/${id}`)
   }
 
   //get teacher by token

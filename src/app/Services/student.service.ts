@@ -44,7 +44,7 @@ export class StudentService {
 
   //delete student by id
   deleteStudent(id: string):Observable<{}>{
-    return this.request.delete<{}>(`/${id}`);
+    return this.request.delete<{}>(`/getStudent/${id}`);
   }
 
   //get student by token
