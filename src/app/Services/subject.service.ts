@@ -17,11 +17,11 @@ export class SubjectService {
 
   //get all subject
   getAllSubject():Observable<{}>{
-    return this.request.get<{}>(``);
+    return this.request.get<{}>(`/subjectApi`);
   }
 
   //add subject
   addSubject(subject: Subject):Observable<{}>{
-    return this.request.post<{}>(``, subject);
+    return this.request.post<{}>(`/subjectApi`, subject);
   }
 }

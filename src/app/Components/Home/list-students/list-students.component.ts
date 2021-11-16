@@ -15,6 +15,8 @@ export class ListStudentsComponent implements OnInit {
 
   allStudents: any = []
 
+  message: string = ''
+
   ngOnInit(): void {
     this.studentService.getAllStudents().subscribe(response => {
       this.allStudents = response
@@ -30,14 +32,15 @@ export class ListStudentsComponent implements OnInit {
     this.class = event.target.value;
   }
 
-  deleteStudent(id: string){
-    this.studentService.deleteStudent(id).subscribe(response => {
-      this.checkRemove= response;
-      this.router.navigate(['home/admin/list-students']).then(() => {
-        window.location.reload();
-      })
-      /* if (this.checkRemove == "Delete") */
-      console.log(response);
+  async deleteStudent(id: string){
+    await this.studentService.deleteStudent(id).subscribe(async (response) => {
+      this.checkRemove = response;
+      console.log(this.checkRemove)
+      if (this.checkRemove){
+        await this.studentService.getAllStudents().subscribe(async (response) => {
+          this.allStudents = response
+        })
+      }
 
     })
 

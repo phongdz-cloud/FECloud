@@ -19,6 +19,8 @@ export class AddTeacherComponent implements OnInit {
 
   infoResponseUser: any = {id: ''}
 
+  message: string = ''
+
   ngOnInit(): void {
   }
 
@@ -51,7 +53,14 @@ export class AddTeacherComponent implements OnInit {
       this.infoResponseUser = response;
       this.teacher.userId = this.infoResponseUser.id;
       await this.teacherService.addTeacher(this.teacher).subscribe(response => {
-        console.log(response);
+        this.infoResponseUser = response;
+        if (this.infoResponseUser.id)
+          this.message = "Thêm Giáo Viên Thành Công"
+        else
+          this.message = "Thêm Giáo Viên Không Thành Công"
+        setTimeout(() => {
+          this.message = ''
+        }, 5000)
       })
     })
   }

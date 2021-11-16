@@ -68,6 +68,17 @@
         "^/addUser": ""
       },
       "changeOrigin": true
+    },
+
+
+
+    "/subjectApi": {
+      "target": "https://ybe36gcokg.execute-api.us-east-1.amazonaws.com/dev/subject",
+      "secure": false,
+      "pathRewrite": {
+        "^/subjectApi": ""
+      },
+      "changeOrigin": true
     }
 
 }

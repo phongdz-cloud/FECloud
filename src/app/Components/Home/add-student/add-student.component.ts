@@ -21,6 +21,8 @@ export class AddStudentComponent implements OnInit {
   student: Student = {firstName: '', middleName: '', lastName: '', bDate: '', address: '', phone: '', userId: ''}
   /* student: Student = {firstName: '', middleName: '', lastName: '', bDate: '', phone: '', address: '', status: true, gmail: '',yearOfAdmisstion: this.date.getFullYear()} */
 
+  message: string = '';
+
   ngOnInit(): void {
 
   }
@@ -58,7 +60,14 @@ export class AddStudentComponent implements OnInit {
       this.student.userId = this.infoResponseUser.id;
       console.log(this.student.userId);
       await this.studentService.addStudent(this.student).subscribe(response => {
-        console.log(response);
+        this.infoResponseUser = response;
+        if (this.infoResponseUser.id)
+          this.message = "Thêm Sinh Viên Thành Công"
+        else 
+          this.message = "Thêm Sinh Viên Không Thành Công"
+        setTimeout(() => {
+          this.message = ''
+        }, 5000)
       })
     })
 /*     this.student.userId = "354a18a7-2280-4dad-9cf2-be2aac9bce8d"

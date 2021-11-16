@@ -69,6 +69,7 @@ export class DashboardComponent {
   today: any;
 
   ngOnInit(): void {
+    
     setInterval(() => {
       var date = new Date();
       this.updateDate(date);

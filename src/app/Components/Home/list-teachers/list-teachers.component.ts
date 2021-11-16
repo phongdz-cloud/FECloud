@@ -14,14 +14,21 @@ export class ListTeachersComponent implements OnInit {
 
   ngOnInit(): void {
     this.teacherService.getAllTeachers().subscribe(response => {
-      console.log(response)
       this.inforListTeachers = response;
     })
   }
 
+  check: any = {success: false}
+
   deleteTeacher(id: string){
     this.teacherService.deleteTeacher(id).subscribe(response => {
-      console.log(response);
+      this.check = response;
+      if (this.check.success)
+      {
+        this.teacherService.getAllTeachers().subscribe(response => {
+          this.inforListTeachers = response
+        })
+      }
     })
   }
 

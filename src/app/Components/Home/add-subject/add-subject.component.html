@@ -1,4 +1,4 @@
-<div class = "myBackGround w3-animate-bottom">
+<div class = "myBackGround w3-animate-right">
     <div class = "addSubject text-light">
         
         <div class ="d-flex">
@@ -13,9 +13,9 @@
                 
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">Tên Môn Học</span>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    <input (keyup)="getInfor($event)" name = "subject" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
-                <button class = "p-2 bg-info text-light">Add Subject</button>
+                <button (click)="addSubject()" class = "p-2 bg-info text-light">Add Subject</button>
             </div>
         </div>
         

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subject } from 'src/app/Interfaces/Subject';
+import { SubjectService } from 'src/app/Services/subject.service';
 
 @Component({
   selector: 'app-add-subject',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddSubjectComponent implements OnInit {
 
-  constructor() { }
+  constructor(private subjectService: SubjectService) { }
 
   ngOnInit(): void {
+  }
+
+  subject: Subject = {name: ''}
+
+
+  getInfor(event: any){
+    this.subject.name = event.target.value
+  }
+
+
+  addSubject(){
+    this.subjectService.addSubject(this.subject).subscribe(response => {
+      console.log(response)
+    })
   }
 
 }
