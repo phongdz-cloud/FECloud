@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "https://z7hqudenb2.execute-api.us-east-1.amazonaws.com/dev/user/login",
+    "target": "https://ybe36gcokg.execute-api.us-east-1.amazonaws.com/dev/user",
     "secure": false,
     "pathRewrite": {
       "^/api": ""
@@ -8,7 +8,7 @@
     "changeOrigin": true
   },
   "/token": {
-    "target": "https://z7hqudenb2.execute-api.us-east-1.amazonaws.com/dev/student/token",
+    "target": "https://ybe36gcokg.execute-api.us-east-1.amazonaws.com/dev/user",
     "secure": false,
     "pathRewrite": {
       "^/token": ""
