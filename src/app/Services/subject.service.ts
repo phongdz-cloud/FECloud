@@ -1,26 +1,27 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http'
 import {Observable} from 'rxjs'
-import {account} from '../Interfaces/Account'
-import {Response} from '../Interfaces/Response';
+import { Subject } from '../Interfaces/Subject';
 
 const httpOptions = {
   header: new HttpHeaders({
     'Content-Type': 'application/json'
   })
 }
-
-
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class SubjectService {
 
   constructor(private request: HttpClient) { }
 
-  loginAccount(info: account):Observable<Response>{
-    console.log(info);
-    console.log(JSON.stringify(info));
-    return this.request.post<Response>('/login', JSON.stringify(info));
+  //get all subject
+  getAllSubject():Observable<{}>{
+    return this.request.get<{}>(`/subjectApi`);
+  }
+
+  //add subject
+  addSubject(subject: Subject):Observable<{}>{
+    return this.request.post<{}>(`/subjectApi`, subject);
   }
 }

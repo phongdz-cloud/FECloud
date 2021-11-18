@@ -1,6 +1,6 @@
 
 <div class="row text-center myScheduler">
-    <div class="col-md-4">
+    <div class="col-md-4 w3-animate-top">
       <div class="btn-group">
         <div
           class="btn btn-primary"
@@ -36,7 +36,7 @@
   </div>
   <br />
 
-  <div [ngSwitch]="view">
+  <div [ngSwitch]="view" class = "w3-animate-bottom">
 
     <mwl-calendar-week-view
       *ngSwitchCase="CalendarView.Week"

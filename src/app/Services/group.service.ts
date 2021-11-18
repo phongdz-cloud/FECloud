@@ -1,26 +1,27 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http'
 import {Observable} from 'rxjs'
-import {account} from '../Interfaces/Account'
-import {Response} from '../Interfaces/Response';
+import { Group } from '../Interfaces/Group';
 
 const httpOptions = {
   header: new HttpHeaders({
     'Content-Type': 'application/json'
   })
 }
-
-
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class GroupService {
 
   constructor(private request: HttpClient) { }
 
-  loginAccount(info: account):Observable<Response>{
-    console.log(info);
-    console.log(JSON.stringify(info));
-    return this.request.post<Response>('/login', JSON.stringify(info));
+  //get all groups
+  getAllGroups():Observable<{}>{
+    return this.request.get<{}>(``);
+  }
+
+  //add group
+  addGroup(group: Group):Observable<{}>{
+    return this.request.post<{}>(``, group)
   }
 }

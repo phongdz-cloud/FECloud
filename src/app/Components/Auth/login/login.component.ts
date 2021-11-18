@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
       if (this.auth.token)
       {
         localStorage.setItem('learn', this.auth.token);
-        this.router.navigate(['home/mainPage']);
+        this.router.navigate(['home/dashboard']);
       }
         
     },error => {console.log(error)});

@@ -3,8 +3,6 @@
     width: 15vw;
     background-color: chocolate;
     color: white;
-    position: fixed;
-    margin-top:9.5vh;
 }
 
 .myHome{
@@ -12,7 +10,6 @@
 }
 
 .myHeader{
-    position: fixed;
     top: 0px;
 }
 
@@ -29,8 +26,6 @@ a{
 }
 
 .myContent{
-    margin-left: 17vw;
-    margin-top: 10vh;
     width: 70vw;
 }
 

@@ -12,10 +12,10 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-/*     if (!localStorage.getItem('learn'))
+    if (!localStorage.getItem('learn'))
       this.router.navigate(['auth/login']);
     else 
-      this.router.navigate(['home/dashboard']); */
+      this.router.navigate(['home/dashboard']);
   }
 
   tempTag: any;

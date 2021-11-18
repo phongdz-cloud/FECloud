@@ -1,8 +1,8 @@
-<div class = "myBack w3-animate-left">
-    <div class = "myForm p-3">
+<div class = "myBack w3-animate-bottom">
+    <div class = "myForm p-4">
         <div class = "text-center">
-            <h1 class = "text-center">Thêm Sinh Viên</h1>
-            <span class = "text-center text-success h2">{{this.message}}</span>
+            <h1 class = "text-light text-center">Thêm Giáo Viên</h1>
+            <span class = "text-center h2 text-info">{{this.message}}</span>
         </div>
         
         <hr />
@@ -24,14 +24,11 @@
         </div>
         
     
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">ID</span>
-            <input (keyup)="getInfor($event)" name = "id" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-        </div>
+    
     
         <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">BirthDay</span>
-            <input (change)="getDate($event)" name = "bDate" type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input name = "bDate" type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
     
         <div class="input-group mb-3">
@@ -45,8 +42,14 @@
         </div>
     
     
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Gmail</span>
+            <input (keyup)="getInfor($event)" name = "gmail" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
     
-        <button (click)="addStudent()" class = "btn bg-success text-light">Add Student</button>
+    
+        <button (click)="addTeacher()" class = "btn bg-success text-light">Add Teacher</button>
     </div>
     
 </div>
+

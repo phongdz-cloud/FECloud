@@ -3,18 +3,18 @@
     <hr />
     
     <div class = "d-flex">
-        <div class="input-group mb-3 mx-3">
+        <div class="input-group mb-3 mx-3 w3-animate-right">
             <span class="input-group-text" id="basic-addon1">Tên Khóa Học</span>
             <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
         </div>
     
-        <div class="input-group mb-3 mx-3">
+        <div class="input-group mb-3 mx-3 w3-animate-right">
             <span class="input-group-text" id="basic-addon1">Mã Giảng Viên Phụ Trách</span>
             <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
         </div>
     </div>
 
-    <div class = "mx-3 d-flex flex-column">
+    <div class = "mx-3 d-flex flex-column w3-animate-left">
         <div>
             <h3>Hình Mô Tả Khóa Học</h3>
             <input (change)="upThumnail($event)" type = "file" accept="*.jpg.png"/>
@@ -22,7 +22,7 @@
         <img class = "myThumnail" [src] = "urlImage"/>
     </div>
 
-    <div class = "m-3">
+    <div class = "m-3 w3-animate-bottom">
         <h3>Mô Tả Khóa Học</h3>
         <ckeditor #content class = "myContent" [editor]="Editor"></ckeditor>
     </div>

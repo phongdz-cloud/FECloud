@@ -69,6 +69,7 @@ export class DashboardComponent {
   today: any;
 
   ngOnInit(): void {
+    
     setInterval(() => {
       var date = new Date();
       this.updateDate(date);
@@ -151,7 +152,19 @@ export class DashboardComponent {
   refresh: Subject<any> = new Subject();
 
   events: CalendarEvent[] = [
-
+    {
+      start: subDays(startOfDay(new Date()), 0),
+      //end: addDays(new Date(), 1),
+      title: 'Báo Cáo Điện Toán Đám Mây',
+      color: colors.red,
+      actions: this.actions,
+      allDay: true,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
   ];
 
   activeDayIsOpen: boolean = true;
