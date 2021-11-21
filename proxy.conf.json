@@ -10,6 +10,7 @@
   "/token": {
     "target": "https://ybe36gcokg.execute-api.us-east-1.amazonaws.com/dev/user",
     "secure": false,
+    "timeout": 6000000,
     "pathRewrite": {
       "^/token": ""
     },
@@ -18,6 +19,7 @@
   "/login": {
     "target": "https://ybe36gcokg.execute-api.us-east-1.amazonaws.com/dev/user/login",
     "secure": false,
+    "timeout": 6000000,
     "pathRewrite": {
       "^/login": ""
     },
@@ -26,6 +28,7 @@
   "/token": {
     "target": "https://ybe36gcokg.execute-api.us-east-1.amazonaws.com/dev/student/token",
     "secure": false,
+    "timeout": 6000000,
     "pathRewrite": {
       "^/token": ""
     },
